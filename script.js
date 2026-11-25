@@ -10,7 +10,7 @@
 // DIFFERENT DATA! Contains movement dates, currency and locale
 
 const account1 = {
-  owner: 'Jonas Schmedtmann',
+  owner: 'Mohamed Fathy',
   movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
   interestRate: 1.2, // %
   pin: 1111,
@@ -30,7 +30,8 @@ const account1 = {
 };
 
 const account2 = {
-  owner: 'Jessica Davis',
+  owner: 'Demo Account 1',
+  username: 'af',
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1.5,
   pin: 2222,
@@ -49,7 +50,49 @@ const account2 = {
   locale: 'en-US',
 };
 
-const accounts = [account1, account2];
+const account3 = {
+  owner: 'Demo Account 2',
+  username: 'of',
+  movements: [1200, -200, 340, -300, -20, 500, 400, -460],
+  interestRate: 0.7, // %
+  pin: 3333,
+
+  movementsDates: [
+    '2020-01-28T09:15:04.904Z',
+    '2020-04-01T10:17:24.185Z',
+    '2020-05-08T14:11:59.604Z',
+    '2020-05-27T17:01:17.194Z',
+    '2020-07-11T23:36:17.929Z',
+    '2020-07-12T10:51:36.790Z',
+    '2020-07-15T12:01:20.894Z',
+    '2020-07-19T08:31:11.101Z',
+  ],
+  currency: 'USD',
+  locale: 'en-US',
+};
+
+const account4 = {
+  owner: 'Demo Account 3',
+  username: 'nf',
+  movements: [430, 1000, 700, 50, 90, -120, -30, 260],
+  interestRate: 1, // %
+  pin: 4444,
+
+  movementsDates: [
+    '2020-02-05T16:33:06.386Z',
+    '2020-04-10T14:43:26.374Z',
+    '2020-05-18T09:48:16.867Z',
+    '2020-06-25T18:49:59.371Z',
+    '2020-07-26T12:01:20.894Z',
+    '2020-07-28T15:22:11.001Z',
+    '2020-07-30T18:12:45.345Z',
+    '2020-08-01T20:44:55.555Z',
+  ],
+  currency: 'EUR',
+  locale: 'de-DE',
+};
+
+const accounts = [account1, account2, account3, account4];
 
 /////////////////////////////////////////////////
 // Elements
@@ -168,6 +211,7 @@ const calcDisplaySummary = function (acc) {
 
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
+    if (acc.username) return;
     acc.username = acc.owner
       .toLowerCase()
       .split(' ')
