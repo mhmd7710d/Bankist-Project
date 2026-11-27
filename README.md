@@ -1,25 +1,31 @@
 # Bankist App
 
-A banking app simulation built with HTML, CSS, and vanilla JavaScript. Manage transactions, transfers, and loans with localized dates and currencies.
+A banking app simulation: log in, see your balance and movements, transfer money, ask for a loan and close the account.
 
-## Built with
-HTML, CSS and JavaScript.
+**Try it:** https://mhmd7710d.github.io/Bankist-Project/
 
-## How to run
-Open the live demo, or download this repository and open index.html in a browser.
-
-Live demo: https://mhmd7710d.github.io/Bankist-Project/
+![Preview](preview.jpg)
 
 ## Demo accounts
-- Username: mf, PIN: 1111
-- Username: af, PIN: 2222
-- Username: of, PIN: 3333
-- Username: nf, PIN: 4444
+- Username `mf`, PIN `1111`
+- Username `af`, PIN `2222`
+- Username `of`, PIN `3333`
+- Username `nf`, PIN `4444`
 
-## Features
-- Log in and view balance and transaction history with localized dates and currencies.
-- Transfer money, request a loan, and close the account.
-- Automatic logout timer.
+## What you can try
+- Log in with one of the accounts above.
+- Transfer an amount to another username (`af`, `of`, `nf`) and watch the balance and the movements update.
+- Ask for a loan, then wait a moment and see the money arrive.
+- Sort the movements, or close the account with the same PIN.
+
+## Built with
+Plain HTML, CSS and JavaScript. No libraries and no build step.
+
+## What I practised
+Arrays and array methods (`map`, `filter`, `reduce`, `sort`), dates and timers, the Intl API for localised dates and currencies, DOM updates, and login and logout state with an automatic logout timer.
+
+## Run it locally
+Download the repository and open `index.html` in a browser.
 
 ## Credits
 Original project from Jonas Schmedtmann's Complete JavaScript Course, all copyright to Jonas Schmedtmann. Personalized by Mohamed Fathy.
